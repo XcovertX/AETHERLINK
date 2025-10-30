@@ -1,55 +1,110 @@
-# Prerequisites
-*.d
+# ============================================================
+# AetherLink Project .gitignore
+# Covers ESP-IDF, Arduino, PlatformIO, Meshtastic, and docs
+# ============================================================
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# --- General OS / Editor ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.bak
+*.tmp
+*.log
+*.pyc
+__pycache__/
+.vscode/
+.idea/
+*.code-workspace
 
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
+# --- Build / Compiled Files ---
+build/
+cmake-build*/
+CMakeFiles/
+CMakeCache.txt
 *.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
+*.elf
+*.bin
 *.hex
+*.map
+*.out
+*.o
+*.d
+*.so
+*.exe
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+# --- ESP-IDF / Arduino ---
+sdkconfig
+sdkconfig.old
+partition_table/
+esp-idf/
+components/*/build/
+dist/
+*.espressif
+*.idf
+*.pioenvs
+.pio/
+platformio.ini.save
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# --- Meshtastic / Firmware ---
+firmware/
+*.uf2
+*.zip
+*.tar.gz
+*.tar
+*.bin.old
+*.json.bak
+node_modules/
 
-# debug information files
-*.dwo
+# --- Python Virtual Envs (if used for tools) ---
+.venv/
+env/
+venv/
+pip-wheel-metadata/
+
+# --- Docs / Rendered Assets ---
+/docs/_build/
+/docs/*.pdf
+/docs/*.docx
+/docs/*.pptx
+/docs/*.html
+*.pdf
+*.docx
+*.pptx
+*.svg.tmp
+
+# --- KiCad / Fritzing / CAD ---
+*.net
+*.pro
+*.kicad_pcb-bak
+*.sch-bak
+*.fzz~
+*.3dshapes/
+*.step
+*.stl
+*.iges
+
+# --- Generated UI Assets ---
+/ui/generated/
+/ui/cache/
+/data/
+*.bmp
+*.png
+*.raw
+
+# --- Local Configs ---
+.env
+.env.local
+secrets.json
+config.json
+mqtt_config.json
+
+# --- Backup / Temp ---
+*~
+*.old
+*.orig
+*.rej
+
+# --- Optional: ignore firmware binaries uploaded to releases ---
+/release/
+
