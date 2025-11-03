@@ -43,10 +43,10 @@ It’s designed to be a **field-deployable communicator** — part tactical tool
 ┌────────────────────────┐          ┌────────────────────────┐
 │  ESP32-C3-DevKitC-02   │  UART    │   RAK4631 (SX1262)     │
 │                        │ <──────> │   running Meshtastic   │
-│ Waveshare 1.28” LCD    │          │   BLE + LoRa mesh      │
+│ 2.9” E-Ink FeatherWing │          |   BLE + LoRa mesh      │
 │ Akwox Button Panel     │          └────────────────────────┘
 │ MAX7219 Matrix         │
-│ 2.9” E-Ink FeatherWing │
+│                        │
 └────────────────────────┘
         │
         └── Wi-Fi → Optional MQTT / Web Dashboard
