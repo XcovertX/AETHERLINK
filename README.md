@@ -37,17 +37,21 @@ It’s designed to be a **field-deployable communicator** — part tactical tool
 
 ## 🧠 System Design
 
-[User Interface Frontend]          [Mesh Core Backend]
-┌────────────────────────┐         ┌────────────────────────┐
-│  ESP32-C3-DevKitC-02   │  UART   │   RAK4631 (SX1262)     │
-│                        │ <──────▶│   running Meshtastic   │
-│ Waveshare 1.28” LCD    │         │   BLE + LoRa mesh      │
-│ Akwox Button Panel     │         └────────────────────────┘
-│ MAX7219 Matrix          │
-│ 2.9” E-Ink FeatherWing  │
+<pre style="white-space: pre;">
+
+[User Interface Frontend]              [Mesh Core Backend]
+┌────────────────────────┐          ┌────────────────────────┐
+│  ESP32-C3-DevKitC-02   │  UART    │   RAK4631 (SX1262)     │
+│                        │ <──────> │   running Meshtastic   │
+│ Waveshare 1.28” LCD    │          │   BLE + LoRa mesh      │
+│ Akwox Button Panel     │          └────────────────────────┘
+│ MAX7219 Matrix         │
+│ 2.9” E-Ink FeatherWing │
 └────────────────────────┘
         │
         └── Wi-Fi → Optional MQTT / Web Dashboard
+
+</pre>
 
 
 The ESP32-C3 parses Meshtastic serial messages, renders visual data, and exposes optional network telemetry via Wi-Fi.
